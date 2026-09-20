@@ -2,28 +2,63 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: You
-middle_name: R.
-last_name: Name
+# -----------------------------------------------------------------------------
+# Identidade do site
+# -----------------------------------------------------------------------------
+title: Arlindo Gomes                    # "blank" = usa seu nome como título do site
+first_name: Arlindo
+middle_name: ""
+last_name: Gomes
+email: "agsn@cin.ufpe.br"    # TODO: seu e-mail real
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  The best way to reach me is by e-mail or LinkedIn.
+description: >
+  PhD student, researcher and product designer based in Recife, Brazil,
+  working with Extended Realities (XR), Computer Vision and Data Visualization.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
-lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
-apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
+  Powered by <a href="https://alshedivat.github.io/al-folio/">al-folio</a>.
+  Hosted by GitHub Pages.
+keywords: arlindo gomes, extended reality, data visualization, human-computer interaction, computer vision, product design
+lang: en                        # conteúdo em inglês; mude para pt-br se preferir
+icon: 🥽                        # favicon (emoji); pode trocar por imagem em /assets/img/
 
-url: https://alshedivat.github.io # the base hostname & protocol for your site
-baseurl: /al-folio # the subpath of your site, e.g. /blog/. Leave blank for root
-last_updated: false # set to true if you want to display last updated in the footer
-impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
-back_to_top: true # set to false to disable the back to top button
+# -----------------------------------------------------------------------------
+# URL base do GitHub Pages — preencha conforme o seu caso:
+# -----------------------------------------------------------------------------
+# Site pessoal  → url: https://SEU-USUARIO.github.io   e  baseurl: ""
+# Site de projeto → url: https://SEU-USUARIO.github.io e  baseurl: "/nome-do-repo"
+url: "https://arlindogomes.github.io/"    # TODO
+baseurl: ""                             # TODO (vazio para site pessoal)
+
+# -----------------------------------------------------------------------------
+# Jekyll Scholar (página /publications lê _bibliography/papers.bib)
+# Seu nome fica em negrito nas listas de autores:
+# -----------------------------------------------------------------------------
+scholar:
+  last_name: [Gomes]
+  first_name: [Arlindo, A.]
+
+  style: apa
+  locale: en
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+  bibtex_filters: [latex, smallcaps, superscript]
+  replace_strings: true
+  join_strings: true
+  details_dir: bibliography
+  details_link: Details
+  query: "@*"
+  group_by: year
+  group_order: descending
+
+# -----------------------------------------------------------------------------
+# Google Fonts (mantido do setup anterior)
+# -----------------------------------------------------------------------------
+third_party_libraries:
+  google_fonts:
+    url:
+      fonts: "https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700|Fraunces:400,600,700|JetBrains+Mono:400,500|Material+Icons&display=swap"
 
 # -----------------------------------------------------------------------------
 # Theme
