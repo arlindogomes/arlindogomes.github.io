@@ -1,4 +1,4 @@
-  - name: Update _config.yml ⚙️
+      - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
